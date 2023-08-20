@@ -577,24 +577,11 @@ _saveCharEnd:
     ret             8
 WriteVal ENDP
 
-; ============================ 
+; ---------------------------------------------------------------------------------
 ; Function: printOutput 
-;  
-; Summary: Displays each integer from an input array, calculates their sum and rounded average, then presents these values.
-; 
+; Summary: Displays each integer from an input array, calculates their sum and rounded average, then presents these values
 ; Requirements: Input addresses must be valid and the content should be initialized properly.
-; 
-; After-Effects: Original state of the registers is preserved post procedure call.
-; 
-; Input: 
-;   [EBP + 28] - Title for numbers list ("You entered these numbers: ").
-;   [EBP + 32] - Title for sum display ("The sum is: ").
-;   [EBP + 36] - Title for average display ("The average is: ").
-;   [EBP + 40] - Address of the integer array to be processed.
-;   [EBP + 44] - Storage location for each output string.
-; 
-; Output: Modifies content at [EBP + 44] with new string data.
-; ============================
+; ---------------------------------------------------------------------------------
 printOutput PROC uses EAX EBX ECX EDX ESI
     ; Start of the procedure.
     push            EBP
